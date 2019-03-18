@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/BLA.dir/Odds_Table/main.cpp.o CMakeFiles/BLA.dir/Odds_Table/Odds_Table.cpp.o  -o BLA 

@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/avliu/Documents/CLionProjects/BLA_2/Odds_Table/Odds_Table.cpp
+Odds_Table.hpp
+/home/avliu/Documents/CLionProjects/BLA_2/Odds_Table/Odds_Table.hpp
+iostream
+-
+algorithm
+-
+vector
+-
+
+/home/avliu/Documents/CLionProjects/BLA_2/Odds_Table/Odds_Table.hpp
+iostream
+-
+algorithm
+-
+vector
+-
+unordered_set
+-
+fstream
+-
+
