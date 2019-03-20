@@ -15,9 +15,7 @@ void Odds_Table::insert_path(){
     double den = 1;
     double path_value = 1;
     for(int i = 0; i < layer; i++){
-        //numerator multiply by the value at that node
         num = table[0][current_path[i]];
-        //denominator is 1 minus
         den -= table[0][current_path[i]];
         if(layer==lottery_teams && i == layer-1) { den = 1; }
         path_value *= (num/den);
