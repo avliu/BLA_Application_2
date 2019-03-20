@@ -48,7 +48,7 @@ void Odds_Table::insert_path(){
 //          n P r
 // where n = number of total teams, r = given number of picks.
 // At each permutation, we call the insert_path function.
-void Odds_Table::recursive(int current_digit, const int total_digits, int values){
+void Odds_Table::find_permutation(int current_digit, const int total_digits, int values){
     int target = values-total_digits+1+current_digit;
     int current_value = 0;
     int restart = current_path[current_digit];
@@ -58,7 +58,7 @@ void Odds_Table::recursive(int current_digit, const int total_digits, int values
     }
     if(current_digit+1 < total_digits){
         for(int i = current_value; i < target; i++){
-            recursive(current_digit + 1, total_digits, values);
+            find_permutation(current_digit + 1, total_digits, values);
             current_path[current_digit]++;
         }
         current_path[current_digit] = restart;
@@ -81,10 +81,11 @@ void Odds_Table::recursive(int current_digit, const int total_digits, int values
     }
 }
 
+//update one column in the table
 void Odds_Table::update_layer(){
     current_path.push_back(layer-1);
     invalid_nodes.insert(layer-1);
-    recursive(0, current_path.size(), total_teams);
+    find_permutation(0, current_path.size(), total_teams);
 }
 
 void Odds_Table::update_all(){

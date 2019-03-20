@@ -14,7 +14,7 @@ The hpp file also contains any code unrelated to the calculations of the table c
 
 Contains all code related to calculating table cells. To fill in all cells (“update_all”), we calculate them column by column (“update_layer”). The methodology for filling a column is as follows.
 
-For a given column, we will calculate every possible permutation of picks leading up to that column recursively (“recursive”). For example, suppose the given column is column #3. Some permutations of picks leading up to column 3 are:
+For a given column, we will calculate every possible permutation of picks leading up to that column recursively (“find_permutation”). For example, suppose the given column is column #3. Some permutations of picks leading up to column 3 are:
 
 1. Seed 1 gets pick 1, seed 2 gets pick 2
 2. Seed 2 gets pick 1, seed 1 gets pick 2

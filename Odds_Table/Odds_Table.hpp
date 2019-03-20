@@ -53,19 +53,26 @@ public:
         }
         for(int i = 0; i < table[0].size(); i++){
             for(int j = 0; j < table.size(); j++){
-                outputFile << table[j][i] << ",";
+                outputFile << table[j][i];
+                if(j < table.size()-1){
+                    outputFile << ",";
+                }
             }
             outputFile << std::endl;
         }
     }
 
+    void update_all();
+
+
+private:
+
     void insert_path();
 
-    void recursive(int current_digit, const int total_digits, int values);
+    void find_permutation(int current_digit, const int total_digits, int values);
 
     void update_layer();
 
-    void update_all();
 };
 
 
