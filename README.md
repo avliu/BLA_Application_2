@@ -14,7 +14,7 @@ The solution, coded in C++ and using basic standard libary methods, is flexible 
 -- PROJECT PARTS -- 
 
   1. "Odds_Table" contains all code
-  2. "results" contains csv files representing the calculated probabilities for several given draft scenarios
+  2. "results" contains csv files representing the calculated probabilities for several given draft scenarios. A "-1" is the same as a dash in the Wikipedia table. It represents a cell that has absolutely no chance of happening by virtue of the given draft rules. The solution to the original problem given is in the "Hypothetical_Draft.csv" file 
   3. "details.md" describes the statistical and programming approach, as well as runtime/space analysis 
   4. ".idea", "cmake_build_debug", and "CMakeLists.txt" are default C++ and Github folders. These can be safely ignored
   
