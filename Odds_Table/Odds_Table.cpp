@@ -14,12 +14,14 @@ void Odds_Table::insert_path(){
     double num = 1;
     double den = 1;
     double path_value = 1;
+    // collect values for a particular current_path
     for(int i = 0; i < layer; i++){
         num = table[0][current_path[i]];
         den -= table[0][current_path[i]];
         if(layer==lottery_teams && i == layer-1) { den = 1; }
         path_value *= (num/den);
     }
+    //for a particular current_path, toss its values into the valid cells
     if(layer < lottery_teams){
         for(int j = 0; j < total_teams; j++){
             if(invalid_nodes.find(j) == invalid_nodes.end()){
