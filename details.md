@@ -16,15 +16,15 @@ Contains all code related to calculating table cells. To fill in all cells (“u
 
 For a given column, we will calculate every possible permutation of picks leading up to that column recursively (“recursive”). For example, suppose the given column is column #3. Some permutations of picks leading up to column 3 are:
 
-Seed 1 gets pick 1, seed 2 gets pick 2
-Seed 2 gets pick 1, seed 1 gets pick 2
-Seed 10 gets pick 1, seed 4 gets pick 2
+1. Seed 1 gets pick 1, seed 2 gets pick 2
+2. Seed 2 gets pick 1, seed 1 gets pick 2
+3. Seed 10 gets pick 1, seed 4 gets pick 2
 
 For each permutation of picks- which is a vector called “current_path” in the code- we call the method “insert_path.” The method will first calculate the odds that this permutation occurs, and then it will calculate the remaining amount of combinations remaining in the lottery after these picks. Those values are tossed into every valid cell in the given column. A valid cell for a particular current_path is a cell whose seed wasn’t already used up in the current_path. For example, using the same current_path examples above, the invalid cells in column #3 for each current_path are:
 
-Seed 1, seed 2
-Seed 1, seed 2
-Seed 10, seed 4
+1. Seed 1, seed 2
+2. Seed 1, seed 2
+3. Seed 10, seed 4
 
 After every possible permutation of paths tosses its values into the given column, we do some small calculations on the given column itself before arriving at a properly-updated column (I have realized after several attempts that typing out the methodology and intuition behind the actual calculations with proper due diligence would result in a substantially larger writeup. As such, I will spare you these details here. But if you would like, I can explain the calculations very thoroughly and intuitively over the phone, in person, or with a separate writeup). 
 
