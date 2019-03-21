@@ -20,7 +20,7 @@ For a given column, we will calculate every possible permutation of picks leadin
 2. Seed 2 gets pick 1, seed 1 gets pick 2
 3. Seed 10 gets pick 1, seed 4 gets pick 2
 
-For each permutation of picks- which is a vector called “current_path” in the code- we call the method “insert_path.” The method will first calculate the odds that this permutation occurs, and then it will calculate the remaining amount of combinations in the lottery after these picks. Those values are then tossed into every valid cell in the given column. A valid cell for a particular current_path is a cell whose seed wasn’t already used up in the current_path. For example, using the same current_path examples above, the INVALID cells in column #3 for each current_path are:
+For each permutation of picks- which is a vector called “current_path” in the code- we call the method “insert_path.” The method will first calculate the odds that this permutation occurs, and then it will calculate the remaining amount of combinations in the lottery after these picks. Those values are then tossed into every valid cell in the given column. A valid cell for a particular current_path is a cell whose seed wasn’t already used up in the current_path. For example, using the same examples above, the INVALID cells in column #3 for each current_path are:
 
 1. Seed 1, seed 2
 2. Seed 1, seed 2
