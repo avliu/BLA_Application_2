@@ -24,7 +24,7 @@ int main() {
     //toy draft for testing
     create_and_fill(2, std::vector<double>{.4, .3, .2, .1}, std::string("results/Toy_Draft.csv"));
 
-    //provided hypothetical draft
+    //hypothetical draft
     create_and_fill(5, std::vector<double>{.114, .113, .112, .111, .099, .089, .079, .069, .059, .049, .039, .029, .019,
                                            .009, .006, .004}, std::string("results/Hypothetical_Draft.csv"));
 
